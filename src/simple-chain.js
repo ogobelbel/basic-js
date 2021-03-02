@@ -3,6 +3,7 @@ const CustomError = require("../extensions/custom-error");
 let ress = [],
 str = '';
 const chainMaker = {
+    
     getLength() {
       return 0;
     },
@@ -12,6 +13,7 @@ const chainMaker = {
     },
     removeLink(position) {
         if(ress[position-1] === undefined || isNaN(position)==true){
+            ress = [];
             throw 'error';
         }
      ress.splice(position-1, 1);
@@ -28,8 +30,10 @@ const chainMaker = {
                 str+='~~';
             }
         }
-        
-     return str;
+        ress = [];
+        let a = str;
+        str = '';
+     return a;
     }
   };
 module.exports = chainMaker;
