@@ -4,10 +4,7 @@ const MODERN_ACTIVITY= 15;
 const HALF_LIFE_PERIOD= 5730;
 
 module.exports = function dateSample(sampleActivity) {
-  if(!sampleActivity ||
-    typeof sampleActivity !== "string" ||
-    MODERN_ACTIVITY < sampleActivity ||
-    sampleActivity < 0) {
+  if(typeof sampleActivity != String) {
     return false;
   }
  if(!Number(sampleActivity)){
