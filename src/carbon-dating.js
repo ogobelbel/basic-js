@@ -3,10 +3,7 @@ const CustomError = require("../extensions/custom-error");
 const MODERN_ACTIVITY= 15; 
 const HALF_LIFE_PERIOD= 5730;
 
-module.exports = function dateSample(sampleActivity) {
-  if(typeof sampleActivity == String){
-    let res = Math.log(MODERN_ACTIVITY/Number(sampleActivity))/(0.693/HALF_LIFE_PERIOD);
-  return Math.ceil(res);
-  }
-  return false;
+module.exports = function dateSample(/* sampleActivity */) {
+  throw new CustomError('Not implemented');
+  // remove line with error and write your code here
 };
