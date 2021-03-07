@@ -33,9 +33,7 @@ module.exports = class DepthCalculator {
       else{ // если массив пустой переходим к некст элементу
         arrNumber++;
         if(count>=count1){
-          if(arrNumber>1){
-            count++;
-          }
+         
           count1=count;
         }
         count = 1;
