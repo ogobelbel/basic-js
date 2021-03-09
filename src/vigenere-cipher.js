@@ -109,7 +109,7 @@ class VigenereCipheringMachine {
     }
     encrypt(message, key) {
       if(!message||!key){
-        throw 'error';
+        throw new Error();
       }
       let key1 = key.toUpperCase();
       let str = message.toUpperCase();
@@ -126,7 +126,7 @@ class VigenereCipheringMachine {
     }    
     decrypt(message, key) {
       if(!message||!key){
-        throw 'error';
+        throw new Error();
       }
       let key1 = key.toUpperCase();
       let str = message.toUpperCase();
