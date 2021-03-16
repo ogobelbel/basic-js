@@ -11,6 +11,9 @@ module.exports = function repeater(str, options){
   if(!options.separator){
     options.separator = '+';
   }
+  if(!options.additionSeparator){
+    options.additionSeparator = '|';
+      }
  
     let strRes = '';
   console.log(options.repeatTimes);
@@ -31,5 +34,3 @@ module.exports = function repeater(str, options){
  
    return strRes;
 };
-  
-
